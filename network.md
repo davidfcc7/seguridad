@@ -24,12 +24,12 @@
 
 # ps
     ver los procesos actuales
-# kil numero de proceso
+# kill numero de proceso
     para cerrar el proceso
 # top
     muestra los procesos que mas recursos usan
 
-# ---------------------     EDITORES DE TEXTO      ---------------------------------
+# ---------------------     EDITORES DE TEXTO (VIM)      ---------------------------------
 
 # vi o vim
     para salir esc :q
