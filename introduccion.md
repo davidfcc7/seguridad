@@ -95,7 +95,9 @@ muestra/mueve/copia o remueve todos los archivos de esta extencion
     muestra el mensaje almacenado
 
 # cat 
-    concatenar dos archivos
+    concatenar dos archivos o leer archivos pequeños
+# less
+    leer archivos grandes
 
 #### -------------------    OPERADORES DE CONTROL   ------------------------------
 
@@ -117,6 +119,12 @@ muestra/mueve/copia o remueve todos los archivos de esta extencion
     r-x (101)   | 755
 # publico       |
     r-x (101)   |
+
+    r => 4
+    w => 2
+    x => 1
+
+    -rwxr-xr-x = > 755
 
 # modo simbolico
 u ---> solo para el usuario
@@ -144,6 +152,9 @@ a ---> aplica para todos
 # printenv
     Variables de entorno
 
+# chmod u+x ejemplo.txt
+    asigna solamente al usuario el permiso de ejecucion
+
 #### -------------------    COMANDOS DE BUSQUEDA     ------------------------------
 
 # which archivo
@@ -158,4 +169,7 @@ a ---> aplica para todos
     buscar una palabra en un archivo
 # wc
     ver la cantidad de palabras que tiene el archivo
+# ls -l 
+    si comienza con - es un archivo / si comienza con d es una carpeta
+
     
