@@ -1,45 +1,51 @@
-
-# -----------------------------   USUARIOS Y GRUPOS
-
-
-groupadd nombre_del_grupo: crear un nuevo grupo.
-groupdel nombre_del_grupo: borrar un grupo.
-groupmod -n nuevo_nombre_del_grupo viejo_nombre_del_grupo: renombrar un grupo.
-useradd -c “Name Surname ” -g admin -d /home/user1 -s /bin/bash user1: Crear un nuevo usuario perteneciente al grupo “admin”.
-useradd user1: crear un nuevo usuario.
-userdel -r user1: borrar un usuario (‘-r’ elimina el directorio Home).
-usermod -c “User FTP” -g system -d /ftp/user1 -s /bin/nologin user1: cambiar los atributos del usuario.
-passwd: cambiar contraseña.
-passwd user1: cambiar la contraseña de un usuario (solamente por root).
-chage -E 2011-12-31 user1: colocar un plazo para la contraseña del usuario. En este caso dice que la clave expira el 31 de diciembre de 2011.
-pwck: chequear la sintaxis correcta el formato de fichero de ‘/etc/passwd’ y la existencia de usuarios.
-grpck: chequear la sintaxis correcta y el formato del fichero ‘/etc/group’ y la existencia de grupos.
-newgrp group_name: registra a un nuevo grupo para cambiar el grupo predeterminado de los ficheros creados recientemente.
 Permisos en Ficheros (Usa ”+” para colocar permisos y ”-” para eliminar)
-ls -lh: Mostrar permisos.
-ls /tmp | pr -T5 -W$COLUMNS: dividir la terminal en 5 columnas.
-chmod ugo+rwx directory1: colocar permisos de lectura ®, escritura (w) y ejecución(x) al propietario (u), al grupo (g) y a otros (o) sobre el directorio ‘directory1’.
-chmod go-rwx directory1: quitar permiso de lectura ®, escritura (w) y (x) ejecución al grupo (g) y otros (o) sobre el directorio ‘directory1’.
-chown user1 file1: cambiar el dueño de un fichero.
-chown -R user1 directory1: cambiar el propietario de un directorio y de todos los ficheros y directorios contenidos dentro.
-chgrp group1 file1: cambiar grupo de ficheros.
-chown user1:group1 file1: cambiar usuario y el grupo propietario de un fichero.
-find / -perm -u+s: visualizar todos los ficheros del sistema con SUID configurado.
-chmod u+s /bin/file1: colocar el bit SUID en un fichero binario. El usuario que corriendo ese fichero adquiere los mismos privilegios como dueño.
-chmod u-s /bin/file1: deshabilitar el bit SUID en un fichero binario.
-chmod g+s /home/public: colocar un bit SGID en un directorio –similar al SUID pero por directorio.
-chmod g-s /home/public: desabilitar un bit SGID en un directorio.
-chmod o+t /home/public: colocar un bit STIKY en un directorio. Permite el borrado de ficheros solamente a los dueños legítimos.
-chmod o-t /home/public: desabilitar un bit STIKY en un directorio.
-Atributos especiales en ficheros (Usa ”+” para colocar permisos y ”-” para eliminar)
-chattr +a file1: permite escribir abriendo un fichero solamente modo append.
-chattr +c file1: permite que un fichero sea comprimido / descomprimido automaticamente.
-chattr +d file1: asegura que el programa ignore borrar los ficheros durante la copia de seguridad.
-chattr +i file1: convierte el fichero en invariable, por lo que no puede ser eliminado, alterado, renombrado, ni enlazado.
-chattr +s file1: permite que un fichero sea borrado de forma segura.
-chattr +S file1: asegura que un fichero sea modificado, los cambios son escritos en modo synchronous como con sync.
-chattr +u file1: te permite recuperar el contenido de un fichero aún si este está cancelado.
-lsattr: mostrar atributos especiales.
+
+ls -lh: 
+Mostrar permisos.
+ls /tmp | pr -T5 -W$COLUMNS: 
+dividir la terminal en 5 columnas.
+chmod ugo+rwx directory1: 
+colocar permisos de lectura ®, escritura (w) y ejecución(x) al propietario (u), al grupo (g) y a otros (o) sobre el directorio ‘directory1’.
+chmod go-rwx directory1: 
+quitar permiso de lectura ®, escritura (w) y (x) ejecución al grupo (g) y otros (o) sobre el directorio ‘directory1’.
+chown user1 file1: 
+cambiar el dueño de un fichero.
+chown -R user1 directory1: 
+cambiar el propietario de un directorio y de todos los ficheros y directorios contenidos dentro.
+chgrp group1 file1: 
+cambiar grupo de ficheros.
+chown user1:group1 file1: 
+cambiar usuario y el grupo propietario de un fichero.
+find / -perm -u+s: 
+visualizar todos los ficheros del sistema con SUID configurado.
+chmod u+s /bin/file1: 
+colocar el bit SUID en un fichero binario. El usuario que corriendo ese fichero adquiere los mismos privilegios como dueño.
+chmod u-s /bin/file1: 
+deshabilitar el bit SUID en un fichero binario.
+chmod g+s /home/public: 
+colocar un bit SGID en un directorio –similar al SUID pero por directorio.
+chmod g-s /home/public: 
+desabilitar un bit SGID en un directorio.
+chmod o+t /home/public: 
+colocar un bit STIKY en un directorio. Permite el borrado de ficheros solamente a los dueños legítimos.
+chmod o-t /home/public: 
+desabilitar un bit STIKY en un directorio.
+chattr +a file1: 
+permite escribir abriendo un fichero solamente modo append.
+chattr +c file1: 
+permite que un fichero sea comprimido / descomprimido automaticamente.
+chattr +d file1: 
+asegura que el programa ignore borrar los ficheros durante la copia de seguridad.
+chattr +i file1: 
+convierte el fichero en invariable, por lo que no puede ser eliminado, alterado, renombrado, ni enlazado.
+chattr +s file1: 
+permite que un fichero sea borrado de forma segura.
+chattr +S file1: 
+asegura que un fichero sea modificado, los cambios son escritos en modo synchronous como con sync.
+chattr +u file1: 
+te permite recuperar el contenido de un fichero aún si este está cancelado.
+lsattr: 
+mostrar atributos especiales.
 
 ARTÍCULO RELACIONADO:
 Con el terminal: Comandos de tamaño y espacio
