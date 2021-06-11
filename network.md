@@ -12,3 +12,6 @@
     muestra los dispositivos de red
 # ip a
     muestra informacion de la red
+# route -n
+    dispositivo que me este permitiendo la conexion a internet
+    
