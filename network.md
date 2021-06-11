@@ -10,3 +10,5 @@
     va a mostrar todas las ip por donde vamos a pasar para conectarnos a una pagina web
 # netstat -i
     muestra los dispositivos de red
+# ip a
+    muestra informacion de la red
