@@ -1,4 +1,4 @@
-# tar -cvf ejemplo.tar ejemplo/
+# tar -cvf ejemplo.tar ejemplo/ agregamos un punto al final si queremos que comprima en la ubicacion donde estamos
     comprimir un archivo a .tar
 # tar -cvzf ejemplo.tar.gz ejemplo/ / tar -xzvf ejemplo.tar.gz
     comprimir un archivo a .tar y convertirlo en gzip / descomprimir un archivo gzip
