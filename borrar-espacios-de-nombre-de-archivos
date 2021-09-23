@@ -1,0 +1,7 @@
+#!/bin/bash
+# Muestra los archivos con espacios en su nombre
+find . -depth -name '* *' | while IFS= read -r f ; do  echo $f; done
+#Elimina los espacios del nombre
+find . -depth -name '* *' | while IFS= read -r f ; do mv -i "$f" "$(dirname "$f")/$(basename "$f"|tr ' ' _)" ; done
+# Vuelve a listar si existen archivos con espacios
+find . -depth -name '* *' | while IFS= read -r f ; do  echo $f; done
